@@ -109,5 +109,5 @@ everywhere.
 1. The S3 upload is a simple PUT request, we don't handle chunked upload. It has worked fine for files that are a 
 few megabytes in size, if your files are much larger than that it may cause problems.
 2. The script does not roll back if a deploy fails.
-3. There is no integration with Git, like there is in the official EB cli. This script only takes a readymade zip file and
+3. There is no integration with Git, like there is in the official EB cli. This script only takes a readymade jar file and
 deploys it.
