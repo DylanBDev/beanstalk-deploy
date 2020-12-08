@@ -32,7 +32,7 @@ jobs:
         environment_name: MyApplication-Environment
         version_label: 12345
         region: us-west-2
-        deployment_package: deploy.zip
+        deployment_package: deploy.jar
 ```
 
 ### Deploying an existing version
