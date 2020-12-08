@@ -23,8 +23,8 @@ jobs:
     steps:
     
       
-    - name: Deploy to EB
-      uses: einaregilsson/beanstalk-deploy@v14
+    - name: Beanstalk Deploy for JAR
+      uses: DylanBDev/beanstalk-deploy@initial
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
