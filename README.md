@@ -8,7 +8,7 @@ not handle rolling back the environment.
 
 ## Using as a GitHub Action
 
-The action expects you to have already generated a zip file with the version to be deployed. Example:
+The action expects you to have already generated a JAR file with the version to be deployed. Example:
 
 ```yaml
 name: Deploy master
@@ -22,11 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - name: Checkout source code
-      uses: actions/checkout@v1
-
-    - name: Generate deployment package
-      run: zip -r deploy.zip . -x '*.git*'
       
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v14
@@ -99,7 +94,7 @@ Beanstalk-deploy assumes that you have the environment variables ```AWS_ACCESS_K
 defined. Pass the rest of the parameters in on the command line, like so:
 
 ```
-beanstalk-deploy.js MyApplicationName MyApplication-Environment 12345 us-west-2 deploy.zip
+beanstalk-deploy.js MyApplicationName MyApplication-Environment 12345 us-west-2 deploy.jar
 ```
 
 Just like in the GitHub action you can skip the final file parameter and the program will attempt to deploy an existing
