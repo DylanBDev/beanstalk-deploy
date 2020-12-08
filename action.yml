@@ -1,6 +1,6 @@
-name: 'Beanstalk Deploy'
-description: 'Deploy a zip file to AWS Elastic Beanstalk'
-author: 'Einar Egilsson'
+name: 'Beanstalk Deploy for JAR'
+description: 'Deploy a JAR file to AWS Elastic Beanstalk'
+author: 'Dylan Blanchard'
 runs:
   using: 'node12'
   main: 'beanstalk-deploy.js'
